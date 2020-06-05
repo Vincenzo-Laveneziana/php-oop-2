@@ -1,39 +1,33 @@
 <?php 
 
-include_once __DIR__.'/Magazzino.php';
-
-class Prodotto extends Magazzino{
+class Prodotto {
   //Property
+  public $marca; 
   public $nome;
-  public $marca;
   public $tipologia;
-  public $prezzo;
+  public $sconto;
 
   //Construct
-  public function __construct($_reparto, $_dispon, $_sconto, $_nome, $_marca, $_tipologia, $_prezzo){
-    parent::__construct($_reparto, $_dispon, $_sconto);
-    $this->nome = $_nome;
+  public function __construct( $_marca, $_nome, $_tipologia, $_sconto){
     $this->marca = $_marca;
+    $this->nome = $_nome;
     $this->tipologia = $_tipologia;
-    $this->prezzo = $_prezzo;
+    $this->sconto = $_sconto;
   }
 
   public function show() {
-    echo "Reparto: {$this->reparto} <br>";
-    echo "Disponibilità: {$this->dispon} <br>";
     echo "Tipologia: {$this->tipologia} <br>";
     echo "Nome: {$this->nome} <br>";
     echo "Marca: {$this->marca} <br>";
-    echo "Prezzo: €  {$this->prezzo} <br>";
-    echo "Sconto del : {$this->sconto} % <br>";
-
+    echo "Sconto: {$this->sconto}% <br>";
   }
 
-  public function calcolaSconto(){
+  public function calcolaSconto($_prezzo){
     $percent = $this->prezzo * $this->sconto / 100;
     $prezzoFinale = $this->prezzo -  $percent;
-    return  number_format($prezzoFinale,2);
+    return  number_format($prezzoFinale,2, ",",".");
   }
+  
 
 }
 
