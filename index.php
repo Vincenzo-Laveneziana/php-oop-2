@@ -11,9 +11,9 @@ $prodotto2 = new Prodotto("1-B", "disponibile", 20, "Oneplus", "8 pro", "Smartph
 /* echo $prodotto2->show();
 echo "Prezzo finale : €  {$prodotto2->calcolaSconto(20)}"; */
 
-$prodotto3 = new Prodotto("2-A", "disponibile", 5, "Razer", "Blade Stealth ", "Notebook Gaming", 858);
+$prodotto3 = new Prodotto("2-A", "disponibile", 5, "Razer", "Blade Stealth ", "Notebook Gaming", 1000);
 echo $prodotto3->show();
-echo "Prezzo finale : €  {$prodotto3->calcolaSconto(5)}"; 
+echo "Prezzo finale : €  {$prodotto3->calcolaSconto()}"; 
 
 
 ?>
@@ -36,7 +36,7 @@ echo "Prezzo finale : €  {$prodotto3->calcolaSconto(5)}";
       <span>Marca: <?php echo $prodotto1->marca ?></span>
       <span>Prezzo: <?php echo $prodotto1->prezzo ?></span>
       <span>Sconto: <?php echo $prodotto1->sconto ?>%</span>
-      <span>Prezzo finale : <?php echo $prodotto1->calcolaSconto(10)  ?></span>
+      <span>Prezzo finale : <?php echo $prodotto1->calcolaSconto()  ?></span>
     </div>
 
     <div class="card">
@@ -47,7 +47,7 @@ echo "Prezzo finale : €  {$prodotto3->calcolaSconto(5)}";
       <span>Marca: <?php echo $prodotto2->marca ?></span>
       <span>Prezzo: <?php echo $prodotto2->prezzo ?></span>
       <span>Sconto: <?php echo $prodotto2->sconto ?>%</span>
-      <span>Prezzo finale : <?php echo $prodotto2->calcolaSconto(20)  ?></span>
+      <span>Prezzo finale : <?php echo $prodotto2->calcolaSconto()  ?></span>
     </div>
 
 

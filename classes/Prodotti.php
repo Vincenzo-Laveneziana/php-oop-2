@@ -29,7 +29,7 @@ class Prodotto extends Magazzino{
 
   }
 
-  public function calcolaSconto($prezzoScont){
+  public function calcolaSconto(){
     $percent = $this->prezzo * $this->sconto / 100;
     $prezzoFinale = $this->prezzo -  $percent;
     return  number_format($prezzoFinale,2);
