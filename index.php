@@ -34,9 +34,9 @@ echo "Prezzo finale : €  {$prodotto3->calcolaSconto()}";
       <span>Tipologia: <?php echo $prodotto1->tipologia ?></span>
       <span>Nome: <?php echo $prodotto1->nome ?></span>
       <span>Marca: <?php echo $prodotto1->marca ?></span>
-      <span>Prezzo: <?php echo $prodotto1->prezzo ?></span>
+      <span>Prezzo: € <?php echo $prodotto1->prezzo ?></span>
       <span>Sconto: <?php echo $prodotto1->sconto ?>%</span>
-      <span>Prezzo finale : <?php echo $prodotto1->calcolaSconto()  ?></span>
+      <span>Prezzo finale : € <?php echo $prodotto1->calcolaSconto()  ?></span>
     </div>
 
     <div class="card">
@@ -45,9 +45,9 @@ echo "Prezzo finale : €  {$prodotto3->calcolaSconto()}";
       <span>Tipologia: <?php echo $prodotto2->tipologia ?></span>
       <span>Nome: <?php echo $prodotto2->nome ?></span>
       <span>Marca: <?php echo $prodotto2->marca ?></span>
-      <span>Prezzo: <?php echo $prodotto2->prezzo ?></span>
+      <span>Prezzo: € <?php echo $prodotto2->prezzo ?></span>
       <span>Sconto: <?php echo $prodotto2->sconto ?>%</span>
-      <span>Prezzo finale : <?php echo $prodotto2->calcolaSconto()  ?></span>
+      <span>Prezzo finale : € <?php echo $prodotto2->calcolaSconto()  ?></span>
     </div>
 
 
