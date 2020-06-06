@@ -15,6 +15,7 @@ class Prodotto {
     $this->sconto = $_sconto;
   }
 
+  //Methos
   public function show() {
     echo "Tipologia: {$this->tipologia} <br>";
     echo "Nome: {$this->nome} <br>";
@@ -26,6 +27,15 @@ class Prodotto {
     $percent = $this->prezzo * $this->sconto / 100;
     $prezzoFinale = $this->prezzo -  $percent;
     return  number_format($prezzoFinale,2, ",",".");
+  }
+
+  //Verifica la disponibilità del prodotto
+  public function disponibilita($_quantita){
+    if ($this->quantita <= 0){
+      return 'Non Disponibile';
+    } else{
+      return 'Disponibile';
+    }
   }
   
 
